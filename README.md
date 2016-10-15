@@ -2,6 +2,8 @@
 
 This is a git_auto_deploy. It uses python and flask :D
 
+Deployment instructions to a server: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+
 1. Run this on your server and it works out of port 5000.
 2. Add the webhooks to GitHub
 3. Make sure to add your repositories to the repository.json file
