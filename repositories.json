@@ -1,0 +1,5 @@
+{
+"repositories":[
+    {"url":"https://github.com/nesh170/lost_and_found.git", "local_location":"/home/bitnami/lost_and_found", "script":"auto_build.sh"}
+]
+}
