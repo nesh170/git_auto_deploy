@@ -26,13 +26,13 @@ class InvalidUsage(Exception):
 
 @app.route("/", methods=['POST'])
 def auto_deploy():
-    # try:
-    repository_url = request.get_json()['repository']['clone_url']
-    repo_info = get_repositories_list(repository_url)
-    subprocess.Popen(repo_info['local_location'] + '/' + repo_info['script'],cwd=repo_info['local_location'], shell=True, executable="/bin/bash")
-    # except TypeError:
-    #     return BadRequest()
-    return repository_url
+    try:
+        repository_url = request.get_json()['repository']['clone_url']
+        repo_info = get_repositories_list(repository_url)
+        subprocess.Popen(repo_info['local_location'] + '/' + repo_info['script'],cwd=repo_info['local_location'], shell=True, executable="/bin/bash")
+    except TypeError:
+        return BadRequest()
+    return "Update received, currently updating repository and starting up the server. KTHXBYE :D"
 
 def get_repositories_list(respository_url):
     with open(os.path.dirname(os.path.realpath(__file__)) + '/repositories.json') as data_file:
