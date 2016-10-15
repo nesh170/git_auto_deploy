@@ -1,6 +1,6 @@
 # git_auto_deploy
 
-This is a git_auto_deploy
+This is a git_auto_deploy. It uses python and flask :D
 
 1. Run this on your server and it works out of port 5000.
 2. Add the webhooks to GitHub
